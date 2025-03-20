@@ -64,7 +64,7 @@ export default function RootLayout({
           withCredentials: true,
         }
       );
-      console.log(UserDetails)
+
 
       if (UserDetails.data.message === "Authorized") {
         console.log("log");

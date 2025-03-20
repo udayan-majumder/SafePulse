@@ -25,7 +25,7 @@ export default function LoginPage() {
         withCredentials: true,
       }
     );
-    console.log(dataresponse)
+  
     if (dataresponse.data.message === "UserLoggedIn") {
       toast.success("Logged in Successfull");
       setTimeout(() => {
