@@ -6,7 +6,7 @@ const RegisterUser = async(req,res)=>{
 const {Username,Email,Password,Phoneno} = req.body
 
 try{
-const Userquery = await pool.query("select * from userdetails where username=$1 and email=$2",[Username,Email])
+const Userquery = await pool.query("select * from userdetails where email=$1",[Email])
 
 if(!Userquery.rows.length){
 

@@ -17,13 +17,15 @@ import {
 import axios from "axios";
 import { Mail, KeyRound, PhoneCall,User} from "lucide-react";
 import { useState } from "react";
-
+import { useRouter } from "next/navigation";
+import toast,{Toaster} from "react-hot-toast";
 export default function LoginPage() {
   const [UserName, setName] = useState<string | null>(null);
   const [UserEmail, setEmail] = useState<string | null>(null);
   const [UserPassword, setPassword] = useState<string | null>(null);
   const [UserRePassword, setRePassword] = useState<string | null>(null);
   const [UserPhoneNo, setPhoneNo] = useState<number | null>(null);
+  const router = useRouter()
 
   async function triggerRegister() {
    
@@ -41,6 +43,20 @@ export default function LoginPage() {
          }
        );
 
+       if(dataresponse.data.message === "User added succesfully"){
+        setTimeout(()=>{
+          toast.success("User Registered")
+         router.push("/login");
+        },500)
+       
+       }
+       else{
+        toast.error("user exsists")
+       }
+
+    }
+    else{
+      toast.error("Password didnt match ")
     }
    
 
@@ -48,6 +64,7 @@ export default function LoginPage() {
 
   return (
     <Box height={["100%"]} width={["100%"]}>
+      <Toaster/>
       <Stack
         direction={["column", "row"]}
         bgColor={["#F8B4E3", "#fff"]}
