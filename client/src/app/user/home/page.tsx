@@ -8,10 +8,11 @@ export default function HomePage(){
 
 
 
-    return(
-        <Box>
-         <Link href="/user/chatroom"><Button>click me</Button></Link>
-        </Box>
-        
-    )
+    return (
+      <Box>
+        <Link href="/user/map">
+          <Button bgColor={["#F8B4E3"]} color={["#fff"]}>Go to Maps</Button>
+        </Link>
+      </Box>
+    );
 }

@@ -95,10 +95,11 @@ const MapPage = () => {
       height={"100%"}
       width={"100%"}
       display={["flex"]}
-      justifyContent={["column"]}
+      flexDirection={["column"]}
+      justifyContent={["center"]}
       alignItems={["center"]}
     >
-      <Box width="100%" height="90%" position="relative" zIndex={0}>
+      <Box width={["90%","60%"]} height={["60%","80%"]} position="relative" zIndex={0}>
         {!isMapLoaded && <p>Loading Map...</p>}
         <div
           ref={mapContainerRef}
