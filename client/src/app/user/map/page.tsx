@@ -21,7 +21,7 @@ const MapPage = () => {
     console.log("Triggered SOS:", latitude, longitude);
     try {
       await axios.post(
-        `${process.env.NEXT_PUBLIC_SERVER_PORT!}/user/sendsos`,
+        `${process.env.NEXT_PUBLIC_SERVER_URL!}/user/sendsos`,
         { Latitude: latitude, Longitude: longitude },
         { withCredentials: true }
       );

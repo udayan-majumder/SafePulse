@@ -29,7 +29,7 @@ export default function LoginPage() {
    
     if(UserPassword === UserRePassword){
        const dataresponse = await axios.post(
-         `${process.env.NEXT_PUBLIC_SERVER_PORT!}/user/register`,
+         `${process.env.NEXT_PUBLIC_SERVER_URL!}/user/register`,
          {
            Username: UserName,
            Email: UserEmail,

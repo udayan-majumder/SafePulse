@@ -59,11 +59,12 @@ export default function RootLayout({
   async function UserState() {
     try {
       const UserDetails = await axios.get(
-        `${process.env.NEXT_PUBLIC_SERVER_PORT!}/user/getlogindetails`,
+        `${process.env.NEXT_PUBLIC_SERVER_URL!}/user/getlogindetails`,
         {
           withCredentials: true,
         }
       );
+      console.log(UserDetails)
 
       if (UserDetails.data.message === "Authorized") {
         console.log("log");

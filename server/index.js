@@ -12,10 +12,7 @@ const port = process.env.PORT;
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "https://43lbm6gg-3000.inc1.devtunnels.ms"
-    ],
+    origin: `${process.env.CLIENT_URL}`,
     methods: ["GET", "POST"],
     credentials: true,
   })

@@ -16,7 +16,7 @@ export default function LoginPage() {
 
   async function triggerlogin() {
     const dataresponse = await axios.post(
-      `${process.env.NEXT_PUBLIC_SERVER_PORT!}/user/login`,
+      `${process.env.NEXT_PUBLIC_SERVER_URL!}/user/login`,
       { 
         Email: UserEmail,
         Password: UserPassword,
@@ -70,8 +70,9 @@ export default function LoginPage() {
           >
             <Flex direction="column" justify={["center"]} align={["center"]} gap={1}>
               <Image
-                src="./logo-desktop.png"
+                src="/logo-desktop.png"
                 width={["auto"]}
+                alt="err"
                 height={["220px", "300px", "400px", "450px"]}
               />
               <Text fontFamily={["Rubik"]} fontSize={["30px","40px"]} letterSpacing={1} fontWeight={700} color={"#fff"}>SafePulse</Text>
