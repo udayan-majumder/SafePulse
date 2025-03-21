@@ -12,7 +12,7 @@ const port = process.env.PORT;
 
 app.use(
   cors({
-    origin: `${process.env.CLIENT_URL}`,
+    origin: [`${process.env.CLIENT_URL}`],
     methods: ["GET", "POST"],
     credentials: true,
   })
