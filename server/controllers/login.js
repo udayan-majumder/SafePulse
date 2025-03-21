@@ -27,7 +27,7 @@ const LoginUser = async (req, res) => {
        res.cookie("token", assigntoken, {
          httpOnly: true,
          secure: process.env.NODE_ENV === "production", // Only send over HTTPS in production
-         sameSite: "none", // Prevent cross-site requests
+         sameSite: "strict", // Prevent cross-site requests
          maxAge: 24 * 60 * 60 * 1000,
        });
 
