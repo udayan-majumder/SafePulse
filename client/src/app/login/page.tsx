@@ -117,7 +117,7 @@ export default function LoginPage() {
                   fontWeight={500}
                   borderBottom="1px solid #EDEDED"
                 >
-                  Don't have account? signup
+                  Don't have account? signup!
                 </Text>
               </Link>
             </Flex>
